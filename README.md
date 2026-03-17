@@ -284,4 +284,4 @@ A API usa **JWT (JSON Web Token)** com middleware Bearer Token:
 
 ---
 
-Desenvolvido durante o curso **Geração Tech - Full Stack** 🚀
+Desenvolvido durante o curso **Geração Tech 3.0 - Full Stack** 🚀
