@@ -1,8 +1,8 @@
-# 🛍️ Loja Drip - Backend API
+# Loja Drip - Backend API
 
 API RESTful para a **Loja Drip**, um e-commerce desenvolvido com Node.js, Express e PostgreSQL (Supabase).
 
-## 📋 Tecnologias
+## Tecnologias
 
 | Tecnologia | Versão | Descrição |
 |---|---|---|
@@ -16,7 +16,7 @@ API RESTful para a **Loja Drip**, um e-commerce desenvolvido com Node.js, Expres
 | nodemon | 3.x | Hot-reload em dev |
 | CORS | — | Controle de acesso cross-origin |
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 src/
@@ -47,7 +47,7 @@ src/
     └── ProductService.js   # Lógica de negócio de produtos (busca, CRUD transacional)
 ```
 
-## ⚙️ Configuração
+## Configuracao
 
 ### 1. Clonar o repositório
 
@@ -95,7 +95,7 @@ npm start
 
 O servidor sincroniza automaticamente o banco de dados ao iniciar (`sync({ alter: true })`).
 
-## 🔗 Endpoints da API
+## Endpoints da API
 
 **Base URL:** `http://localhost:3001`
 
@@ -217,7 +217,7 @@ O servidor sincroniza automaticamente o banco de dados ao iniciar (`sync({ alter
 | `price-range` | string | Faixa de preço (ex: `50-200`) |
 | `option[id]` | string | Filtro por opção |
 
-## 🗄️ Models / Banco de Dados
+## Models / Banco de Dados
 
 ### User (tabela: `usuarios`)
 | Campo | Tipo | Observação |
@@ -267,7 +267,7 @@ O servidor sincroniza automaticamente o banco de dados ao iniciar (`sync({ alter
 - **Product** → **ProductImage**: 1:N
 - **Product** → **ProductOption**: 1:N
 
-## 🔒 Autenticação
+## Autenticacao
 
 A API usa **JWT (JSON Web Token)** com middleware Bearer Token:
 
@@ -278,10 +278,30 @@ A API usa **JWT (JSON Web Token)** com middleware Bearer Token:
    ```
 3. Token expira conforme configurado em `JWT_EXPIRES_IN` (padrão: 1 dia)
 
-## 👤 Autor
+## Testes
+
+O projeto utiliza **Jest** e **Supertest** para testes automatizados da API.
+
+### Executar os testes
+
+```bash
+npm test
+```
+
+### Arquivos de teste
+
+| Arquivo | Descricao |
+|---|---|
+| `tests/user.test.js` | Testes do CRUD de usuarios e autenticacao |
+| `tests/category.test.js` | Testes do CRUD de categorias |
+| `tests/product.test.js` | Testes do CRUD de produtos |
+
+Os testes rodam com `--runInBand` para execucao sequencial, evitando conflitos no banco de dados.
+
+## Autor
 
 **George Viana Lima**
 
 ---
 
-Desenvolvido durante o curso **Geração Tech 3.0 - Full Stack** 🚀
+Desenvolvido durante o curso **Geracao Tech 3.0 - Full Stack**
